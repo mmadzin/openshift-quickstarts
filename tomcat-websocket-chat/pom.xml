@@ -38,11 +38,11 @@
 
         <!-- version dependencies -->
         <version.websocket.api>1.1</version.websocket.api>
-        <version.jboss.logging>3.1.4.GA-redhat-2</version.jboss.logging>
+        <version.jboss.logging>3.5.0.Final</version.jboss.logging>
 
         <!-- maven-compiler-plugin -->
-        <maven.compiler.target>1.6</maven.compiler.target>
-        <maven.compiler.source>1.6</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
     </properties>
 
 
@@ -65,5 +65,13 @@
         <!-- Maven will append the version to the finalName (which is the name 
             given to the generated war, and hence the context root) -->
         <finalName>${project.artifactId}</finalName>
+
+	<plugins>
+		<plugin>
+		    <groupId>org.apache.maven.plugins</groupId>
+		    <artifactId>maven-war-plugin</artifactId>
+		    <version>3.3.2</version>
+		</plugin>
+	</plugins>
     </build>
 </project>
